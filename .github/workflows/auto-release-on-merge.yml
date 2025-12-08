@@ -1,22 +1,23 @@
-name: Auto Release on Merge
+name: auto-release-on-merge
 
 on:
   pull_request:
-    types: [closed]
+    types:
+      - closed
     branches:
-      - master
+      - master   # <-- use master as your main branch
 
 permissions:
   contents: write
 
 jobs:
   create_release:
-    # Only when PR is merged AND contains 'release: yes' (case-insensitive)
+    # Only run when PR is merged AND contains 'release: yes' (case-sensitive)
     if: >
       github.event.pull_request.merged == true &&
       (
-        contains(toLower(github.event.pull_request.title), 'release: yes') ||
-        contains(toLower(github.event.pull_request.body), 'release: yes')
+        contains(github.event.pull_request.title, 'release: yes') ||
+        contains(github.event.pull_request.body, 'release: yes')
       )
     runs-on: ubuntu-latest
 
@@ -24,7 +25,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
         with:
-          ref: main
+          ref: master
 
       - name: Extract version from composer.json
         id: version
