@@ -5,7 +5,7 @@ on:
     types:
       - closed
     branches:
-      - master   # <-- use master as your main branch
+      - master
 
 permissions:
   contents: write
