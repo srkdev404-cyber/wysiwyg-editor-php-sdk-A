@@ -11,7 +11,7 @@ PHP version >= 5.4.0 is required.
 The following PHP extensions are required:
 
 * fileinfo
-* imagick
+* imagick 
 
 ## Setup Instructions
 1. Install composer within the example directory. You can find instructions on how to install composer on composer’s website (https://getcomposer.org/download/)
