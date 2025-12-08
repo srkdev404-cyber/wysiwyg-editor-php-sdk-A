@@ -6,7 +6,6 @@
 Easing the [Froala WYSIWYG HTML Editor](https://github.com/froala/wysiwyg-editor) server side integration in PHP projects.
 
 ## Dependencies
-
 PHP version >= 5.4.0 is required.
 
 The following PHP extensions are required:
