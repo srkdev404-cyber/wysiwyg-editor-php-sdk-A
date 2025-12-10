@@ -10,7 +10,7 @@ PHP version >= 5.4.0 is required.
 
 The following PHP extensions are required:
 
-* fileinfo
+* fileinformation
 * imagick
 
 ## Setup Instructions
