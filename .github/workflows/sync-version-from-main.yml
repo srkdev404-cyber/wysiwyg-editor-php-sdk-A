@@ -1,4 +1,4 @@
-name: Sync Version from Main Repo
+name: Sync Version from Master Repo
  
 on:
   repository_dispatch:
@@ -77,7 +77,7 @@ jobs:
       - name: Create Pull Request using GH CLI
         run: |
           gh pr create \
-            --base main \
+            --base master \
             --head "$BRANCH" \
             --title "Sync version to v${VERSION}" \
             --body "Auto-synced version update."
